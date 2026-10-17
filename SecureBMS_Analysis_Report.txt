@@ -1,0 +1,54 @@
+Loaded dataset from: /home/claude/SecureBMS/data/SecureBMS_OneBattery_OneCell_1000.csv
+================================================================================
+ SECURE BMS ANALYSIS REPORT: SecureBMS_OneBattery_OneCell_1000.csv
+================================================================================
+
+[1] VEHICLE DYNAMICS & TRIP PROFILE
+  • Total Duration       : 1000 seconds (16.67 minutes)
+  • Total Distance       : 8.322 km
+  • Average Speed        : 29.96 km/h
+  • Speed Range          : 8.32 km/h - 55.92 km/h
+
+[2] ELECTRICAL PARAMETERS & CELL SPECIFICATIONS
+  • State of Charge (SoC): Starts at 89.99%, Ends at 72.48% (Drop: 17.51%)
+  • Total Charge Drawn   : 0.8761 Ah (3153.8 A*s)
+  • Nominal Cell Capacity: 5.00 Ah (5003 mAh)
+  • Discharge Current    : Mean=3.15 A, Max=6.61 A, Min=0.10 A
+  • Discharge C-Rate     : Mean=0.63C, Peak=1.32C
+  • Terminal Voltage     : Mean=3.8718 V, Range=[3.6295 V, 4.0580 V]
+  • Reconstructed OCV    : Mean=3.9742 V, Range=[3.8582 V, 4.0950 V]
+  • Correlation (V vs SoC)  : +0.7879 (Raw Terminal Voltage)
+  • Correlation (OCV vs SoC): +0.9909 (Ohmic Drop Compensated)
+
+[3] THERMAL DYNAMICS
+  • Temperature Range    : 27.64 °C to 28.97 °C (Delta: 1.33 °C)
+  • Mean Temperature     : 28.26 °C
+  • Correlation (T vs I) : +0.6695 (Strong Joule heating dependence)
+  • Mean Internal Heat   : 0.401 W (Peak: 1.674 W)
+
+[4] MECHANICAL STRESS & ROAD ANOMALIES
+  • Hump Events Count    : 12 road humps encountered
+  • Hump Timestamps (s)  : [34, 297, 316, 471, 697, 820, 837, 856, 916, 921, 939, 967]
+  • Baseline Vibration   : Mean=0.0414 g (Max=0.1206 g)
+  • Impact Vibration     : Mean=1.9819 g (Min=1.2133 g, Max=2.7632 g)
+  • Vibration Shock Ratio: 47.9x higher during speed hump impact
+
+[5] DEGRADATION & DAMAGE BREAKDOWN
+  • Microcrack Index     : 0.0200 -> 0.2570 (+1184.9% increase)
+  • Internal Resistance  : 28.92 mOhm -> 39.19 mOhm (+35.5% increase)
+  • Total SoH Loss       : 1.1477% (99.9198% -> 98.7721%)
+    - Shock Loss (Humps) : 0.9503% (82.8% of total degradation)
+    - Cycling Loss       : 0.1974% (17.2% of total degradation)
+    - Avg Loss per Hump  : 0.079192% per hump
+    - Normal Decay Rate  : 0.00019980% per second
+  • Resistance Model     : R_int = 28.12 + 43.81 * Microcrack (R^2 = 0.960)
+  • SoH Damage Model     : SoH = 99.99 - 4.90 * Microcrack (R^2 = 0.994)
+
+[6] SECURITY & ANOMALY DETECTION (SecureBMS)
+  • Anomaly Label Counts : {0: 1000}
+  • Verification Status  : CLEAN BENIGN RUN. Zero cyber-attacks or anomalous sensor faults.
+  • Operational Role     : Baseline reference profile for normal harsh-road operation.
+
+================================================================================
+ ANALYSIS COMPLETE
+================================================================================
